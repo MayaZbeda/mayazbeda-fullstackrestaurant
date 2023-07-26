@@ -20,7 +20,7 @@ function Navigation() {
   }
 
 return (
-    <header className="bg-green-800">
+    <header className="bg-blue-800">
       <nav className="flex justify-between p-6 px-4">
         <div className="flex justify-between items-center w-full mx-16">
           <div className="xl:w-1/3">
@@ -50,7 +50,7 @@ return (
                       {user.username}
                     </span>
                     <button
-                      className="inline-block py-2 px-4 text-sm leading-5 text-green-50 bg-green-500 hover:bg-green-600 font-semibold focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                      className="inline-block py-2 px-4 text-sm leading-5 text-blue-50 bg-blue-500 hover:bg-blue-600 font-semibold focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md"
                       onClick={handleLogout}
                     >
                       Log Out
@@ -68,7 +68,7 @@ return (
                     <Link
                       href="/register"
                       passHref
-                      className="inline-block py-2 px-4 text-sm leading-5 text-green-50 bg-green-600 hover:bg-green-700 font-semibold focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                      className="inline-block py-2 px-4 text-sm leading-5 text-blue-50 bg-blue-600 hover:bg-blue-700 font-semibold focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md"
                     >
                       Sign Up
                     </Link>

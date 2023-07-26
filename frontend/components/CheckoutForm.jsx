@@ -151,7 +151,7 @@ export default function CheckoutForm() {
             <input
               id="address"
               htmlFor="address"
-              className="appearance-none block w-full p-3 leading-5 text-gray-900 border border-gray-200 rounded-lg shadow-md placeholder-text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              className="appearance-none block w-full p-3 leading-5 text-gray-900 border border-gray-200 rounded-lg shadow-md placeholder-text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               type="text"
               name="address"
               onChange={onChange}
@@ -172,7 +172,7 @@ export default function CheckoutForm() {
               name="city"
               id="city"
               onChange={onChange}
-              className="appearance-none block w-full p-3 leading-5 text-gray-900 border border-gray-200 rounded-lg shadow-md placeholder-text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              className="appearance-none block w-full p-3 leading-5 text-gray-900 border border-gray-200 rounded-lg shadow-md placeholder-text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             />
           </div>
 
@@ -188,7 +188,7 @@ export default function CheckoutForm() {
               name="state"
               id="state"
               onChange={onChange}
-              className="appearance-none block w-full p-3 leading-5 text-gray-900 border border-gray-200 rounded-lg shadow-md placeholder-text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              className="appearance-none block w-full p-3 leading-5 text-gray-900 border border-gray-200 rounded-lg shadow-md placeholder-text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             />
           </div>
         </div>
@@ -199,7 +199,7 @@ export default function CheckoutForm() {
               <CardElement options={options} />
             </div>
             <button
-              className="inline-block w-full px-6 py-3 text-center font-bold text-white bg-green-500 hover:bg-green-600 transition duration-200 rounded-full"
+              className="inline-block w-full px-6 py-3 text-center font-bold text-white bg-blue-500 hover:bg-blue-600 transition duration-200 rounded-full"
               onClick={(e) => (user ? submitOrder(e) : router.push("/login"))}
               disabled={loading}
             >
