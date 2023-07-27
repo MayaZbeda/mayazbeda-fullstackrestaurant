@@ -1,5 +1,5 @@
 "use strict";
-const stripe = require("stripe")("pk_test_51NXbOlJhjcNkSPVSWP8pxSTcO3YTYEC2hoEzP3u467ZNaORmciJP26r6u3pTrHtiMOlVDisy8s7lY5Icesjy7eER00v6hAQ4iW");
+const stripe = require("stripe")("sk_test_51NXbOlJhjcNkSPVSbpeNAurCJvrTDnbLTwGGNCjnnoGbE7VFqsjhZbvHyeg694ic3tYCzWHoP8UcxD4XTUO0JK4W00YjnxKTPC");
 
 /**
  *  order controller
