@@ -2,6 +2,8 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useAppContext } from "@/context/AppContext";
 import Cookie from "js-cookie";
+import Footer from "@/components/Footer"
+
 const Cart = dynamic(() => import("@/components/Cart"), { ssr: false });
 
 import Head from "next/head";
@@ -17,36 +19,38 @@ function Navigation() {
     router.push("/");
   }
 
-  return (
-    <header className="bg-green-800">
+return (
+    <header className="bg-blue-800">
       <nav className="flex justify-between p-6 px-4">
         <div className="flex justify-between items-center w-full mx-16">
           <div className="xl:w-1/3">
             <Link
-              className="block text-2xl max-w-max text-white font-medium"
               href="/"
+              passHref
+              className="block text-2xl max-w-max text-white font-semibold"
             >
-              Food Order App
+              Blue Food
             </Link>
           </div>
 
           <div className="xl:block xl:w-1/3">
             <div className="flex items-center justify-end">
               <Link
-                className="text-gray-50  hover:text-yellow-200 font-bold"
-                href="/"
+                href="/checkout"
+                passHref
+                className="text-gray-50 hover:text-yellow-200 font-semibold text-lg"
               >
-                Home
+                Checkout
               </Link>
 
-              <div className="hxl:block">
+             <div className="hxl:block">
                 {user ? (
                   <div className="flex items-center justify-end">
-                    <span className="inline-block py-2 px-4 mr-2 leading-5 text-gray-50  hover:text-gray-100 bg-transparent font-medium rounded-md">
+                    <span className="inline-block py-2 px-4 mr-2 leading-5 text-gray-50 hover:text-gray-100 bg-transparent font-semibold rounded-md">
                       {user.username}
                     </span>
                     <button
-                      className="inline-block py-2 px-4 text-sm leading-5 text-green-50 bg-green-500 hover:bg-green-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                      className="inline-block py-2 px-4 text-sm leading-5 text-blue-50 bg-blue-500 hover:bg-blue-600 font-semibold focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md"
                       onClick={handleLogout}
                     >
                       Log Out
@@ -55,14 +59,16 @@ function Navigation() {
                 ) : (
                   <div className="flex items-center justify-end">
                     <Link
-                      className="inline-block py-2 px-4 mr-2 leading-5 text-gray-50  hover:text-yellow-200 font-bold bg-transparent rounded-md"
                       href="/login"
+                      passHref
+                      className="inline-block py-2 px-4 text-lg mr-2 leading-5 text-gray-50 hover:text-yellow-200 font-semibold bg-transparent rounded-md"
                     >
                       Log In
                     </Link>
                     <Link
-                      className="inline-block py-2 px-4 text-sm leading-5 text-green-50 bg-green-600 hover:bg-green-700 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
                       href="/register"
+                      passHref
+                      className="inline-block py-2 px-4 text-sm leading-5 text-blue-50 bg-blue-600 hover:bg-blue-700 font-semibold focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md"
                     >
                       Sign Up
                     </Link>
@@ -78,7 +84,7 @@ function Navigation() {
 }
 
 export default function Layout(props) {
-  const title = "Welcome to Next JS";
+  const title = "Blue Banquet";
 
   return (
     <div>
@@ -90,6 +96,7 @@ export default function Layout(props) {
       <Navigation />
       <Cart />
       <div className="container mx-auto px-4">{props.children}</div>
+      <Footer />
     </div>
   );
 }
