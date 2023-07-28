@@ -3,7 +3,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useInitialRender } from "@/utils/useInitialRender";
 import CheckoutForm from "@/components/CheckoutForm";
 import CheckoutCart from "@/components/CheckoutCart";
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+const stripePromise = loadStripe("sk_test_51NXbOlJhjcNkSPVSbpeNAurCJvrTDnbLTwGGNCjnnoGbE7VFqsjhZbvHyeg694ic3tYCzWHoP8UcxD4XTUO0JK4W00YjnxKTPC");
 
 export default function Checkout() {
   const initialRender = useInitialRender();
